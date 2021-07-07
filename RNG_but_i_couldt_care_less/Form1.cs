@@ -13,6 +13,7 @@ namespace RNG_but_i_couldt_care_less
     public partial class Form1 : Form
     {
         public Random r = new Random();
+        public int i = 1, f = 500000;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace RNG_but_i_couldt_care_less
 
         private void rng_only_Click(object sender, EventArgs e)
         {
-            RNGesus.Text = r.Next(1, 300000).ToString(); 
+            RNGesus.Text = r.Next(i, f).ToString(); 
         }
 
         private void open_only_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace RNG_but_i_couldt_care_less
 
         private void rngopen_Click(object sender, EventArgs e)
         {
-            RNGesus.Text = r.Next(1, 300000).ToString();
+            RNGesus.Text = r.Next(i, f).ToString();
             System.Diagnostics.Process.Start("https://nhentai.net/g/" + RNGesus.Text + "/");
         }
     }
